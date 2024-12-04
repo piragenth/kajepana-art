@@ -12,20 +12,20 @@ jobs:
 
     steps:
       - name: Checkout repo
-        working-directory: ./Frontend
         uses: actions/checkout@v3
+        working-directory: ./Frontend
 
       - name: Setup Node
-        working-directory: ./Frontend
         uses: actions/setup-node@v3
+        working-directory: ./Frontend
 
       - name: Install dependencies
-        working-directory: ./Frontend
         uses: bahmutov/npm-install@v1
+        working-directory: ./Frontend
 
       - name: Build project
-        working-directory: ./Frontend
         run: npm run build
+        working-directory: ./Frontend
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
